@@ -23,7 +23,16 @@ public class Basics {
 	 */
 	public static int getTotalAsCents(int dollars, int cents) {
 		// TODO implement Task 1
-		return -5;
+
+		// initialising variables
+		int total = -1;
+
+		// checking inputs are valid i.e. not negative
+		if (dollars >= 0 & cents >= 0) {
+			total = (dollars * 100) + cents;
+		}
+
+		return total;
 	}
 
 	/**
