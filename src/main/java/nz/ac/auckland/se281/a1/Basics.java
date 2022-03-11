@@ -91,7 +91,22 @@ public class Basics {
 	 */
 	public static int splitAsCents(int moneyOneDollars, int moneyOneCents, int moneyTwoDollars, int moneyTwoCents) {
 		// TODO implement Task 1
-		return -5;
+
+		// initialising variables
+		int halved = -1; // default value is -1.
+
+		// getting the sum of two values
+		int totalSum = sumAsCents(moneyOneDollars, moneyOneCents, moneyTwoDollars, moneyTwoCents);
+
+		// ensuring inputs are valid
+		if (totalSum != -1) {
+			// splitting the sum in half
+			halved = totalSum / 2; // this already takes care of the extra cent if any of the amounts are odd since
+									// it is integer division
+		}
+
+		return halved;
+
 	}
 
 }
