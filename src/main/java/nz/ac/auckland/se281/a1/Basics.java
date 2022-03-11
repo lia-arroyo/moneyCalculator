@@ -29,7 +29,7 @@ public class Basics {
 
 		// checking inputs are valid i.e. not negative
 		if (dollars >= 0 & cents >= 0) {
-			total = (dollars * 100) + cents;
+			total = (dollars * 100) + cents; // turned dollars into cents then added to current cents
 		}
 
 		return total;
@@ -52,7 +52,21 @@ public class Basics {
 	 */
 	public static int sumAsCents(int moneyOneDollars, int moneyOneCents, int moneyTwoDollars, int moneyTwoCents) {
 		// TODO implement Task 1
-		return -5;
+
+		// initialising variables
+		int sum = -1; // default is invalid
+
+		// converting each amount to their total in cents
+		int amountOneCents = getTotalAsCents(moneyOneDollars, moneyOneCents);
+		int amountTwoCents = getTotalAsCents(moneyTwoDollars, moneyTwoCents);
+
+		// checking that neither amounts are invalid
+		if (amountOneCents != -1 & amountTwoCents != -1) {
+			// summing the two amounts
+			sum = amountOneCents + amountTwoCents;
+		}
+
+		return sum;
 	}
 
 	/**
