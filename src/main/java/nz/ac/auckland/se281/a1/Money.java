@@ -29,15 +29,28 @@ public class Money {
 
 		// ensuring dollars input is valid
 		if (dollars >= 0) {
+
 			this.dollars = dollars;
+
 		} else { // reverts to default value
+
 			this.dollars = 0;
 		}
 
 		// ensuring cents input is valid
-		if (cents >= 0) {
+		if (cents >= 0 && cents <= 99) {
 			this.cents = cents;
-		} else { // reverts to default value
+
+		} else if (cents >= 100) { // wrapping cents
+
+			int wrap = cents / 100; // calculating amount in dollars
+			int remainingCents = cents % 100; // amount to be left as cents
+
+			// recalculating dollars and cents
+			this.dollars += wrap;
+			this.cents = remainingCents;
+
+		} else { // reverts to default value if invalid input
 			this.cents = 0;
 		}
 	}
