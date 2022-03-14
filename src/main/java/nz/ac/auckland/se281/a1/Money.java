@@ -76,8 +76,7 @@ public class Money {
 	 */
 	public int getDollars() {
 		// TODO implement Task 2
-
-		return -1;
+		return this.dollars;
 	}
 
 	/**
@@ -87,7 +86,7 @@ public class Money {
 	 */
 	public int getCents() {
 		// TODO implement Task 2
-		return -1;
+		return this.cents;
 	}
 
 	/**
@@ -97,7 +96,12 @@ public class Money {
 	 */
 	public int getTotalAsCents() {
 		// TODO implement Task 2
-		return -1;
+
+		// transforming dollars into cents
+		int dollarsInCents = this.dollars * 100;
+
+		// returning total total amount in cents
+		return dollarsInCents + this.cents;
 	}
 
 	/**
