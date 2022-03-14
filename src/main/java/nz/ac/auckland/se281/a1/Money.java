@@ -12,6 +12,8 @@ package nz.ac.auckland.se281.a1;
 public class Money {
 	// TODO implement Task 2
 	// class attributes here
+	private int dollars;
+	private int cents;
 
 	/**
 	 * Construct a Money instance with given initial dollar and cent components
@@ -24,6 +26,20 @@ public class Money {
 	 */
 	public Money(int dollars, int cents) {
 		// TODO implement Task 2
+
+		// ensuring dollars input is valid
+		if (dollars >= 0) {
+			this.dollars = dollars;
+		} else { // reverts to default value
+			this.dollars = 0;
+		}
+
+		// ensuring cents input is valid
+		if (cents >= 0) {
+			this.cents = cents;
+		} else { // reverts to default value
+			this.cents = 0;
+		}
 	}
 
 	/**
@@ -34,6 +50,10 @@ public class Money {
 	 */
 	public Money() {
 		// TODO implement Task 2
+
+		// initialising default values
+		this.dollars = 0;
+		this.cents = 0;
 	}
 
 	/**
@@ -43,6 +63,7 @@ public class Money {
 	 */
 	public int getDollars() {
 		// TODO implement Task 2
+
 		return -1;
 	}
 

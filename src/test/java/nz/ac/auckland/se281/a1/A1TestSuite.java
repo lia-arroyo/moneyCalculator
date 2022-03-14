@@ -12,8 +12,8 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ //
-		A1TestSuite.Task1Test.class // TASK1
-//		, A1TestSuite.Task2Test.class // TASK2
+		A1TestSuite.Task1Test.class // TASK1 - 6 tasks
+		, A1TestSuite.Task2Test.class // TASK2 - 4 tasks
 //		, A1TestSuite.Task3Test.class // TASK3
 //		, A1TestSuite.Task4Test.class // TASK4
 // ,A1TestSuite.YourTests.class // student-defined tests (facultative)
