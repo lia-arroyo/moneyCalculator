@@ -113,6 +113,11 @@ public class Money {
 	 */
 	public void addDollars(int dollars) {
 		// TODO implement Task 3
+
+		// ensuring dollars input isn't negative
+		if (dollars >= 0) {
+			this.dollars += dollars;
+		}
 	}
 
 	/**
