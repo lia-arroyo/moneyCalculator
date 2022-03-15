@@ -144,6 +144,7 @@ public class Money {
 				// adding the dollar and cent amounts
 				this.dollars += wrap;
 				this.cents = remainingCents;
+
 			} else { // if new total cents is less than 100, add normally
 				this.cents = newTotalCents;
 			}
@@ -162,6 +163,11 @@ public class Money {
 	 */
 	public void subtractDollars(int dollars) {
 		// TODO implement Task 3
+		// ensuring dollars input is valid
+		if (dollars >= 0 && dollars < this.dollars) {
+
+			this.dollars -= dollars;
+		}
 	}
 
 	/**
