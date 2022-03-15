@@ -232,6 +232,25 @@ public class Money {
 	 */
 	public void subtract(Money other) {
 		// TODO implement Task 4
+
+		// transforming both's totals into cents
+		int thisTotal = this.getTotalAsCents();
+		int otherTotal = other.getTotalAsCents();
+
+		// ensuring that the other instance is not larger than this current instance
+		if (otherTotal <= thisTotal) {
+			// getting the new result
+			int newTotal = thisTotal - otherTotal;
+
+			// wrapping up the new total into dollars and cents
+			int newDollars = newTotal / 100;
+			int newCents = newTotal % 100;
+
+			// updating this instance's attributes
+			this.dollars = newDollars;
+			this.cents = newCents;
+
+		}
 	}
 
 	/**
