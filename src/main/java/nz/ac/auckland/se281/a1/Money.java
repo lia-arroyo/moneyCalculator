@@ -133,21 +133,17 @@ public class Money {
 
 		// ensuring cents input is not negative
 		if (cents >= 0) {
+
 			// temp new total cents
 			int newTotalCents = this.cents + cents;
 
 			// wrapping up the cents
-			if (newTotalCents >= 100) {
-				int wrap = newTotalCents / 100; // amount to be added to dollars
-				int remainingCents = newTotalCents % 100; // amount left in cents
+			int excessDollars = newTotalCents / 100; // amount to be added to dollars
+			int remainingCents = newTotalCents % 100; // amount left in cents
 
-				// adding the dollar and cent amounts
-				this.dollars += wrap;
-				this.cents = remainingCents;
-
-			} else { // if new total cents is less than 100, add normally
-				this.cents = newTotalCents;
-			}
+			// updating attributes
+			this.dollars += excessDollars;
+			this.cents = remainingCents;
 		}
 
 	}
