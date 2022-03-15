@@ -116,6 +116,7 @@ public class Money {
 
 		// ensuring dollars input isn't negative
 		if (dollars >= 0) {
+			// add to existing total dollars
 			this.dollars += dollars;
 		}
 	}
@@ -129,6 +130,25 @@ public class Money {
 	 */
 	public void addCents(int cents) {
 		// TODO implement Task 3
+
+		// ensuring cents input is not negative
+		if (cents >= 0) {
+			// temp new total cents
+			int newTotalCents = this.cents + cents;
+
+			// wrapping up the cents
+			if (newTotalCents >= 100) {
+				int wrap = newTotalCents / 100; // amount to be added to dollars
+				int remainingCents = newTotalCents % 100; // amount left in cents
+
+				// adding the dollar and cent amounts
+				this.dollars += wrap;
+				this.cents = remainingCents;
+			} else { // if new total cents is less than 100, add normally
+				this.cents = newTotalCents;
+			}
+		}
+
 	}
 
 	/**
