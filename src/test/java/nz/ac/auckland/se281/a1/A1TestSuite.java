@@ -15,7 +15,7 @@ import org.junit.runners.Suite.SuiteClasses;
 		A1TestSuite.Task1Test.class // TASK1 - 6 tasks
 		, A1TestSuite.Task2Test.class // TASK2 - 4 tasks
 		, A1TestSuite.Task3Test.class // TASK3 - 6 tasks
-//		, A1TestSuite.Task4Test.class // TASK4
+		, A1TestSuite.Task4Test.class // TASK4 - 4 tasks
 // ,A1TestSuite.YourTests.class // student-defined tests (facultative)
 })
 

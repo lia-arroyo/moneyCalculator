@@ -206,6 +206,20 @@ public class Money {
 	 */
 	public void add(Money other) {
 		// TODO implement Task 4
+		// transforming both into cents
+		int thisTotal = this.getTotalAsCents(); // getting total of this current instance in cents
+		int otherTotal = other.getTotalAsCents(); // getting total of other (passed in) instance
+
+		// calculating the new total in cents
+		int newTotal = thisTotal + otherTotal;
+
+		// wrapping the new total into dollar and cents
+		int newDollars = newTotal / 100;
+		int newCents = newTotal % 100;
+
+		// updating this current instance's attributes
+		this.dollars = newDollars;
+		this.cents = newCents;
 	}
 
 	/**
