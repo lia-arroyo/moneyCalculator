@@ -164,7 +164,7 @@ public class Money {
 	public void subtractDollars(int dollars) {
 		// TODO implement Task 3
 		// ensuring dollars input is valid
-		if (dollars >= 0 && dollars < this.dollars) {
+		if (dollars >= 0 && dollars <= this.dollars) {
 
 			this.dollars -= dollars;
 		}
@@ -181,6 +181,23 @@ public class Money {
 	 */
 	public void subtractCents(int cents) {
 		// TODO implement Task 3
+
+		// taking current total and turning it to cents
+		int totalAsCents = this.getTotalAsCents();
+
+		// checking cents input is valid
+		if (cents >= 0 && cents <= totalAsCents) {
+			// temp new total as cents
+			int newTotal = totalAsCents - cents;
+
+			// wrapping result
+			int newDollars = newTotal / 100;
+			int newCents = newTotal % 100;
+
+			// updating instance attributes
+			this.dollars = newDollars;
+			this.cents = newCents;
+		}
 	}
 
 	/**
