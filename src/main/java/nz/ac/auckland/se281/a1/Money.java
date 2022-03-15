@@ -266,6 +266,26 @@ public class Money {
 	 */
 	public void split(Money other) {
 		// TODO implement Task 4
+
+		// transforming both amounts into cents
+		int thisTotal = this.getTotalAsCents();
+		int otherTotal = other.getTotalAsCents();
+
+		// adding then halfing to redistribute the two totals
+		int sum = thisTotal + otherTotal;
+		int individualTotal = sum / 2; // takes care of the extra cent if sum is odd
+
+		// wrapping the new individual total into dollars and cents
+		int indivDollars = individualTotal / 100;
+		int indivCents = individualTotal % 100;
+
+		// updating this current instance
+		this.dollars = indivDollars;
+		this.cents = indivCents;
+
+		// updating the other instance
+		other.dollars = this.dollars;
+		other.cents = this.cents;
 	}
 
 }
