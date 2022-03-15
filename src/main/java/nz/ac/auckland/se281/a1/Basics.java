@@ -101,8 +101,7 @@ public class Basics {
 		// ensuring inputs are valid
 		if (totalSum != -1) {
 			// splitting the sum in half
-			halved = totalSum / 2; // this already takes care of the extra cent if any of the amounts are odd since
-									// it is integer division
+			halved = totalSum / 2; // takes care of extra cent if any of the amounts are odd bc of integer division
 		}
 
 		return halved;
